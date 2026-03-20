@@ -1,0 +1,142 @@
+/*
+ * Global stylesheet for the MCU-inspired university website.
+ *
+ * This file defines a simple palette and layout inspired by the
+ * official MCU branding, using pink as the primary accent colour.
+ * It is intentionally lightweight: no frameworks, no build step—just
+ * plain CSS to make the pages readable and cohesive. Feel free to
+ * enhance or replace this file with a more sophisticated framework
+ * like Tailwind or Bootstrap if desired.
+ */
+
+/* Colour palette */
+:root {
+  --primary-color: #d81b60;
+  --primary-dark: #ad1457;
+  --primary-light: #f8e3ef;
+  --text-color: #2d2d2d;
+  --background-color: #ffffff;
+  --border-radius: 4px;
+  --max-width: 1200px;
+  --font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main .container {
+  max-width: var(--max-width);
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+section h2 {
+  color: var(--primary-dark);
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 0.25rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  border: 1px solid #eee;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1rem;
+  flex: 1;
+}
+
+.cta {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 1rem;
+  transition: background-color 0.2s;
+}
+
+.cta:hover {
+  background-color: var(--primary-dark);
+}
+
+footer {
+  background-color: var(--primary-dark);
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+footer p {
+  margin: 0;
+}
